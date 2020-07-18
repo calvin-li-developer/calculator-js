@@ -2,4 +2,4 @@
 
 Calculator made in JavaScript
 
-Use at: 
+Use at: https://calvin-li-developer.github.io/calculator-js/
