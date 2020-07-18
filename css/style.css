@@ -23,7 +23,9 @@ body {
 h1 {
     position: relative;
     text-align: center;
+    height: max-content;
     width: 100vw;
+    padding-top: 1.5%;
     padding-bottom: 1.5%;
     margin: 0;
 }
@@ -79,4 +81,5 @@ p {
     text-align: center;
     font-weight: bold;
     padding-top: 1.5%;
+    padding-bottom: 1.5%;
 }
