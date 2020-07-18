@@ -46,8 +46,6 @@ class Calculator {
             return;
         }
         if (isNaN(prev)) {
-            console.log(current);
-            console.log(this.prevOperation)
             switch (this.prevOperation) {
                 case '+':
                     computation = current + this.prevCurrentOperand;
@@ -94,7 +92,6 @@ class Calculator {
             this.prevCurrentOperand = parseFloat(this.currentOperand);
         }
         this.currentOperand = computation;
-        console.log(this.currentOperand);
         if (this.operation !== undefined) {
             this.prevOperation = this.operation;
         }
