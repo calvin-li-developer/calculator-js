@@ -1,14 +1,14 @@
 @media only screen and (max-width: 426px) {
     html {
-        font-size: 90%;
+        font-size: 80%;
     }
     .calculator-grid {
         display: grid;
         justify-content: center;
         align-content: center;
         height: 100%;
-        grid-template-columns: repeat(4, 90px);
-        grid-template-rows: minmax(120px, auto) repeat(5, 90px);
+        grid-template-columns: repeat(4, 80px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 80px);
     }
 }
 
