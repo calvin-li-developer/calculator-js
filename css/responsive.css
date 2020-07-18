@@ -1,0 +1,27 @@
+@media only screen and (max-width: 426px) {
+    html {
+        font-size: 90%;
+    }
+    .calculator-grid {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        grid-template-columns: repeat(4, 90px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 90px);
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    html {
+        font-size: 70%;
+    }
+    .calculator-grid {
+        display: grid;
+        justify-content: center;
+        align-content: center;
+        height: 100%;
+        grid-template-columns: repeat(4, 70px);
+        grid-template-rows: minmax(120px, auto) repeat(5, 70px);
+    }
+}
