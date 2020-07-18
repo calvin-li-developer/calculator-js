@@ -9,6 +9,8 @@ class Calculator {
         this.currentOperand = '';
         this.previousOperand = '';
         this.operation = undefined;
+        this.prevCurrentOperand = undefined;
+        this.prevOperation = undefined;
     }
 
     delete() {
@@ -37,32 +39,65 @@ class Calculator {
 
     compute() {
         let computation;
+
         const prev = parseFloat(this.previousOperand);
         const current = parseFloat(this.currentOperand);
-        if (isNaN(prev) || isNaN(current)) {
+        if (isNaN(current)) {
             return;
         }
-        switch (this.operation) {
-            case '+':
-                computation = prev + current;
-                break;
-            case '-':
-                computation = prev - current;
-                break;
-            case '×':
-                computation = prev * current;
-                break;
-            case '+':
-                computation = prev + current;
-                break;
-            case '÷':
-                computation = prev / current;
-                break;
-            default:
-                return;
+        if (isNaN(prev)) {
+            console.log(current);
+            console.log(this.prevOperation)
+            switch (this.prevOperation) {
+                case '+':
+                    computation = current + this.prevCurrentOperand;
+                    break;
+                case '-':
+                    computation = current - this.prevCurrentOperand;
+                    break;
+                case '×':
+                    computation = current * this.prevCurrentOperand;
+                    break;
+                case '+':
+                    computation = current + this.prevCurrentOperand;
+                    break;
+                case '÷':
+                    computation = current / this.prevCurrentOperand;
+                    break;
+                default:
+                    return;
+            }
+        }
+        else {
+            switch (this.operation) {
+                case '+':
+                    computation = prev + current;
+                    break;
+                case '-':
+                    computation = prev - current;
+                    break;
+                case '×':
+                    computation = prev * current;
+                    break;
+                case '+':
+                    computation = prev + current;
+                    break;
+                case '÷':
+                    computation = prev / current;
+                    break;
+                default:
+                    return;
 
+            }
+        }
+        if (this.prevCurrentOperand === undefined) {
+            this.prevCurrentOperand = parseFloat(this.currentOperand);
         }
         this.currentOperand = computation;
+        console.log(this.currentOperand);
+        if (this.operation !== undefined) {
+            this.prevOperation = this.operation;
+        }
         this.operation = undefined;
         this.previousOperand = '';
     }
