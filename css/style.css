@@ -1,32 +1,33 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-    font-family: sans-serif;
-    font-weight: normal;
+@font-face {
+    font-family: 'Poppins';
+    src: url(../fonts/Poppins/Poppins-Regular.ttf)
 }
 
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-weight: normal;
+}
+html{
+    font-family: 'Poppins';
+}
 body {
     padding: 0;
     margin: 0;
+    height: 100%;
     background: linear-gradient(to right, #00AAFF, #00FF6C);
 }
 
 .content {
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    justify-items: center;
+    padding-top: 1.5%;
+    display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
 h1 {
-    position: relative;
     text-align: center;
-    height: max-content;
-    width: 100vw;
-    padding-top: 1.5%;
-    padding-bottom: 1.5%;
     margin: 0;
 }
 
@@ -34,9 +35,8 @@ h1 {
     display: grid;
     justify-content: center;
     align-content: center;
-    height: 100%;
-    grid-template-columns: repeat(4, 100px);
-    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+    grid-template-columns: repeat(4, 95px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 95px);
 }
 
 .calculator-grid>button {
@@ -80,6 +80,6 @@ h1 {
 p {
     text-align: center;
     font-weight: bold;
+    margin: 0;
     padding-top: 1.5%;
-    padding-bottom: 1.5%;
 }
