@@ -8,9 +8,9 @@
     font-weight: normal;
 }
 html{
+    font-family: 'Poppins';
     user-select: none;
     -webkit-user-select: none;
-    font-family: 'Poppins';
     touch-action: manipulation;
 }
 body {
