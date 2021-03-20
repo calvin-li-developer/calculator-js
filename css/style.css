@@ -8,6 +8,8 @@
     font-weight: normal;
 }
 html{
+    user-select: none;
+    -webkit-user-select: none;
     font-family: 'Poppins';
 }
 body {
@@ -86,7 +88,5 @@ p {
 }
 
 button {
-    user-select: none;
-    -webkit-user-select: none;
     touch-action: manipulation;
 }
